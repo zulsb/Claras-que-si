@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'firebase/auth';
 import { useFirebaseApp, useUser } from 'reactfire';
+import LoginWithGoogle from '../Login/LoginWithGoogle'
 
 function Register(props) {
   const firebase = useFirebaseApp();
@@ -39,7 +40,8 @@ function Register(props) {
     { !user.data &&
       <React.Fragment>
         <form>
-          <button onClick={() => console.log('google account')}>Ingresa con cuenta de google</button>
+          {/* componente de login con google (pendiente modificar condicionales) */}
+          <LoginWithGoogle props={'Register'}/>
           <p>------- ó -------</p>
           <label htmlFor="userName">Usuario</label>
           <input id="userName" name="userName" type="text" autoComplete='username' value={register.userName} onChange={chageValue} required />
