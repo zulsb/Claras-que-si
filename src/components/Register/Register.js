@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import 'firebase/auth';
 import { useFirebaseApp, useUser } from 'reactfire';
-import LoginWithGoogle from '../Login/LoginWithGoogle'
+import LoginWithGoogle from '../Login/LoginWithGoogle';
+import { Button } from '../Assets/Styles/Styled';
+
 
 function Register(props) {
   const firebase = useFirebaseApp();
@@ -40,22 +42,23 @@ function Register(props) {
     { !user.data &&
       <React.Fragment>
         <form>
+        <h2>Register</h2>
           {/* componente de login con google (pendiente modificar condicionales) */}
           <LoginWithGoogle props={'Register'}/>
-          <p>------- ó -------</p>
+          <p>- ó -</p>
           <label htmlFor="userName">Usuario</label>
           <input id="userName" name="userName" type="text" autoComplete='username' value={register.userName} onChange={chageValue} required />
           <label htmlFor="email">Email</label>
           <input id="email" name="email" type="text" autoComplete='username' value={register.email} onChange={chageValue} required />
           <label htmlFor="password">Contraseña</label>
           <input id="password" name="password" type="password" autoComplete='current-password' value={register.password} onChange={chageValue} required />
-          <button onClick={submit}>Enviar</button>
+          <Button onClick={submit}>Registrarse</Button>
         </form>
       </React.Fragment>
     }
     {/* Solo se mostrará si no hay un usuario logeado */}
     {
-      user.data && <button onClick={logOut}>Cerrar session</button>
+      user.data && <Button onClick={logOut}>Cerrar session</Button>
     }
     </React.Fragment>
   );

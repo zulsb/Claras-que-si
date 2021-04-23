@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import LoginWithGoogle from './LoginWithGoogle'
+import LoginWithGoogle from './LoginWithGoogle';
+import { Button } from '../Assets/Styles/Styled';
+
+
 
 class Login extends Component {
   render() {
@@ -13,7 +16,8 @@ class Login extends Component {
           <input id="email" type="text" name="email"></input>
           <label for="password">password</label>
           <input id="password" type="password" name="password"></input>
-          <input type="submit" value="login"></input>
+          {/* <Button type="submit" value="login"></Button> */}
+          <Button>Ingresar</Button>
         </form>
       </div>
     );
