@@ -1,16 +1,16 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+  @import url("https://fonts.googleapis.com/css?family=Montserrat:400,900");
+
 	body {
-    font-family: "Montserrat", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;   
     top: 0;
     left: 0;
     background: #8537cc;
     width: 100%;
     height: 100%;
-	}
+    font-family: "Montserrat", sans-serif;
+	}  
 `;
 
 export const Container = styled.div`
@@ -27,18 +27,19 @@ export const Container = styled.div`
       font-size: 36px;
       font-weight: 300;
       color: #fff;
+      font-family: "Montserrat", sans-serif;
     }
   }
 `;
 
 export const Divform = styled.form`
   position: relative;
-  z-index: 1;
   background: #ffffff;
   max-width: 300px;
-  margin: 0 auto 100px;
+  margin: 0 auto 2rem;
   padding: 30px;
   border-radius: 3px;
+  min-height: 488px;
   text-align: center;
 `;
 
@@ -65,11 +66,18 @@ export const Input = styled.input`
 `;
 
 export const TextAcount = styled.button`
-  margin: 15px 0 0;
+  position: absolute;
+    top: -3.8rem;
+    z-index: 3;
+    left: 42%;
   color: #b3b3b3;
   font-size: 12px;
   border: none;
   background-color: transparent;
+`;
+
+export const DivTextA = styled.div`
+  position: relative;
 `;
 
 export const Link = styled.a`
