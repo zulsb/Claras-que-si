@@ -8,7 +8,7 @@ import * as styled from "../Assets/Styles/Styled";
 // trigger para cambio de estado (modificar segun sea 
 // necesario para mostrar login o registro )
 const ChangeLogin = (props) => {
-  return <styled.TextAcount onClick={props.login}>No tienes cuenta? <styled.Link>{props.state === 'register' ? 'Ingresar' : 'Registrarse'}</styled.Link></styled.TextAcount>
+  return <styled.TextAcount onClick={props.login} isRight={true}>{props.state === 'register' ? 'Ya' : 'No'} tienes cuenta? <styled.Link> {props.state === 'register' ? ' Iniciar sesión' : ' Registrarse'}</styled.Link></styled.TextAcount>
 }
 function App() {
   // funcion para cambiar estado entre login y registro

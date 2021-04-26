@@ -44,12 +44,11 @@ function Register(props) {
       {!user.data && (
         <React.Fragment>
             <styled.Container><div><h1>Registro</h1></div></styled.Container>
-          	<styled.Divform>
-          	  <form>
-          	    <styled.Thumbnail></styled.Thumbnail>
+          	<styled.Divform isRight={true}>
+          	    <styled.Thumbnail />
           	    {/* componente de login con google (pendiente modificar condicionales) */}
           	    <LoginWithGoogle props={"Registrarse"} />
-          	    <styled.Containerline><styled.Line></styled.Line><styled.TextO>ó</styled.TextO></styled.Containerline>
+          	    <styled.ContainerButton><styled.Line></styled.Line><styled.TextO>ó</styled.TextO></styled.ContainerButton>
           	    <styled.Input id="userName" name="userName" type="text" autoComplete="username" value={register.userName}
           	      onChange={chageValue} placeholder="Usuario" required />
           	    <styled.Input id="email" name="email" type="text" autoComplete="username"
@@ -57,7 +56,6 @@ function Register(props) {
           	    <styled.Input id="password" name="password" type="password" autoComplete="current-password"
           	      value={register.password} onChange={chageValue} placeholder="Contraseña" required />
           	    <styled.Button onClick={submit}>Registrarse</styled.Button>
-          	  </form>
           	</styled.Divform>
         </React.Fragment>
       )}

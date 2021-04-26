@@ -8,16 +8,14 @@ class Login extends Component {
       <React.Fragment>
         <styled.Container><div><h1>Iniciar Sesión</h1></div></styled.Container>
         <styled.Divform>
-          <form>
-            <styled.Thumbnail></styled.Thumbnail>
+            <styled.Thumbnail />
             <LoginWithGoogle props={"Ingresar"} />
-            <styled.Containerline><styled.Line></styled.Line><styled.TextO>ó</styled.TextO></styled.Containerline>
+            <styled.ContainerButton><styled.Line></styled.Line><styled.TextO>ó</styled.TextO></styled.ContainerButton>
             <styled.Input id="email" name="email" type="text" autoComplete="username"
           	      value="" onChange="" placeholder="Correo electrónico" required />
           	    <styled.Input id="password" name="password" type="password" autoComplete="current-password"
           	      value="" onChange="" placeholder="Contraseña" required />
             <styled.Button>Ingresar</styled.Button>
-          </form>
         </styled.Divform>
       </React.Fragment>
     );

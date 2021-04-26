@@ -1,9 +1,10 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-  @import url("https://fonts.googleapis.com/css?family=Montserrat:400,900");
 
-	body {
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+	
+  body {
     top: 0;
     left: 0;
     background: #8537cc;
@@ -18,16 +19,14 @@ export const Container = styled.div`
   z-index: 1;
   max-width: 300px;
   margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
   div {
     margin: 50px auto;
     text-align: center;
     h1 {
-      margin: 0 0 15px;
-      padding: 0;
       font-size: 36px;
       font-weight: 300;
       color: #fff;
-      font-family: "Montserrat", sans-serif;
     }
   }
 `;
@@ -38,9 +37,9 @@ export const Divform = styled.form`
   max-width: 300px;
   margin: 0 auto 2rem;
   padding: 30px;
-  border-radius: 3px;
-  min-height: 488px;
+  border-radius: 8px;
   text-align: center;
+  min-height: ${({isRight}) => isRight ? '550px' : '488px'};
 `;
 
 export const Thumbnail = styled.div`
@@ -60,16 +59,17 @@ export const Input = styled.input`
   border: 0;
   margin: 0 0 15px;
   padding: 15px;
-  border-radius: 3px;
+  border-radius: 8px;
   box-sizing: border-box;
   font-size: 14px;
 `;
 
-export const TextAcount = styled.button`
-  position: absolute;
-    top: -3.8rem;
-    z-index: 3;
-    left: 42%;
+export const TextAcount = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: -3.8rem;
+  z-index: 3;
   color: #b3b3b3;
   font-size: 12px;
   border: none;
@@ -87,12 +87,11 @@ export const Link = styled.a`
 `;
 
 export const Button = styled.button`
-  outline: 0;
   background: #8537cc;
   width: 100%;
   border: none;
   padding: 15px;
-  border-radius: 3px;
+  border-radius: 8px;
   color: #ffffff;
   font-size: 14px;
   transition: all 0.3 ease;
@@ -100,17 +99,11 @@ export const Button = styled.button`
   text-transform: uppercase;
 `;
 
-export const Buttonline = styled.button`
-  outline: 0;
+export const Buttonline = styled(Button)`
   background: none;
-  width: 100%;
-  border: 0;
   padding: 10px;
-  border-radius: 3px;
   color: #8537cc;
-  font-size: 14px;
   transition: all 0.3 ease;
-  cursor: pointer;
   border: #8537cc 1px solid;
   display: flex;
   align-items: center;
@@ -122,9 +115,14 @@ export const Buttonline = styled.button`
     width: 28px;
     margin-right: 10px;
   }
+
+  &:hover {
+	  background-color: #8537cc;
+    color: #ffffff;
+  }
 `;
 
-export const Containerline = styled.div`
+export const ContainerButton = styled.div`
   width: 50%;
   display: inline-block;
   margin-top: 5px;
@@ -153,3 +151,8 @@ export const TextO = styled.div`
   color: rgb(151, 151, 151);
   padding: 0px 10px;
 `;
+
+export const Component = styled.div`
+  
+`;
+
