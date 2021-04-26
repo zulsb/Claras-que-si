@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Login from '../Login/Login';
 import Register from '../Register/Register';
+import {GlobalStyle} from "../Assets/Styles/Styled";
 import * as styled from "../Assets/Styles/Styled";
 
 
@@ -20,7 +21,7 @@ function App() {
   }
   return (
     <React.Fragment>
-    <styled.GlobalStyle />
+    <GlobalStyle />
       {state === 'login' && (<Login></Login>)}
       {state === 'register' && (<Register></Register>)}
       <styled.DivTextA>
