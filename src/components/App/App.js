@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import './App.css';
 import Login from '../Login/Login';
 import Register from '../Register/Register';
+import Icome from '../income/Income';
 import {GlobalStyle} from "../Assets/Styles/Styled";
 import * as styled from "../Assets/Styles/Styled";
+import { useUser } from 'reactfire';
 
 
 // trigger para cambio de estado (modificar segun sea 
@@ -11,6 +13,7 @@ import * as styled from "../Assets/Styles/Styled";
 const ChangeLogin = (props) => {
   return <styled.TextAcount onClick={props.login} isRight={true}>{props.state === 'register' ? 'Ya' : 'No'} tienes cuenta? <styled.Link> {props.state === 'register' ? ' Iniciar sesión' : ' Registrarse'}</styled.Link></styled.TextAcount>
 }
+
 function App() {
   // funcion para cambiar estado entre login y registro
   // y mostrar segun sea necesario
@@ -19,15 +22,23 @@ function App() {
     if (state === 'login'){setState('register')}
     else setState('login')
   }
+  const { data: user } = useUser();
   return (
-    <React.Fragment>
+    <Suspense fallback={<div>...loading</div>}>
     <GlobalStyle />
-      {state === 'login' && (<Login></Login>)}
-      {state === 'register' && (<Register></Register>)}
-      <styled.DivTextA>
-        <ChangeLogin login={triggerLoginState} state={state} />
-      </styled.DivTextA>
-    </React.Fragment>
+    {!user &&
+      <React.Fragment>
+          {state === 'login' && (<Login></Login>)}
+          {state === 'register' && (<Register></Register>)}
+          <styled.DivTextA>
+            <ChangeLogin login={triggerLoginState} state={state} />
+          </styled.DivTextA>
+      </React.Fragment>
+    }
+    { user &&
+      <Icome></Icome>
+    }
+    </Suspense>
   );
 }
 
