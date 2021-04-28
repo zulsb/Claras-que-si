@@ -23,7 +23,10 @@ function Icome(props) {
   }
 
   const changeValue = (event) => {
-    const { name, value } = event.target;
+    let { name, value } = event.target;
+    if (name === 'subtotal') {
+      value = parseInt(value, 10);
+    }
     setIcome({
       ...icome,
       [name]: value
