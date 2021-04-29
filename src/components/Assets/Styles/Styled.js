@@ -5,7 +5,10 @@ export const GlobalStyle = createGlobalStyle`
   body {
     top: 0;
     left: 0;
-    background: #8537cc;
+    background:-webkit-linear-gradient(top, #B153F9, #4A1176);
+    background:-moz-linear-gradient(top, #B153F9, #4A1176);
+    background:-o-linear-gradient(top, #B153F9, #4A1176);
+    background:-ms-linear-gradient(top, #B153F9, #4A1176);
     width: 100%;
     height: 100%;
     font-family: "Montserrat", sans-serif;

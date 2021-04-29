@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'firebase/firestore';
 import { useFirestore, useFirestoreCollectionData, useUser } from "reactfire";
+import Register from '../Register/Register';
 
 function Icome(props) {
   /* state de icome */
@@ -55,6 +56,7 @@ function Icome(props) {
         <textarea id='note' name="note" value={icome.note} onChange={changeValue} cols="30" rows="10" />
         <button onClick={onSubmit}>Agregar</button>
       </form>
+      <Register></Register>
     </React.Fragment>
   )
 }
