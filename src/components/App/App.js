@@ -6,6 +6,7 @@ import Icome from '../income/Income';
 import {GlobalStyle} from "../Assets/Styles/Styled";
 import * as styled from "../Assets/Styles/Styled";
 import { useUser } from 'reactfire';
+import Header from '../Header/Header';
 
 
 // trigger para cambio de estado (modificar segun sea 
@@ -36,7 +37,10 @@ function App() {
       </React.Fragment>
     }
     { user &&
-      <Icome></Icome>
+      <React.Fragment>
+        <Header></Header>
+        <Icome></Icome>
+      </React.Fragment>
     }
     </Suspense>
   );

@@ -1,5 +1,9 @@
 import styled, { createGlobalStyle } from "styled-components";
 
+
+/* Global
+============================= */
+
 export const GlobalStyle = createGlobalStyle`
 
   body {
@@ -14,6 +18,10 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Montserrat", sans-serif;
 	}  
 `;
+
+
+/* Login and register
+============================= */
 
 export const Container = styled.div`
   position: relative;
@@ -43,7 +51,7 @@ export const Divform = styled.form`
   padding: 30px;
   border-radius: 8px;
   text-align: center;
-  min-height: ${({isRight}) => isRight ? '550px' : '488px'};
+  min-height: ${({ isRight }) => (isRight ? "550px" : "488px")};
 `;
 
 export const Thumbnail = styled.div`
@@ -123,7 +131,7 @@ export const Buttonline = styled(Button)`
   }
 
   &:hover {
-	  background-color: #8537cc;
+    background-color: #8537cc;
     color: #ffffff;
   }
 `;
@@ -157,4 +165,76 @@ export const TextO = styled.div`
   color: rgb(151, 151, 151);
   padding: 0px 10px;
 `;
+
+// Homepage styles
+
+/* Header
+============================= */
+
+export const Header = styled.header`
+  padding: 2rem 0;
+  position: relative;
+  z-index: 3;
+  background: #f2f0f0;
+  border-top: 13px solid #4a1176;
+  font-size: 14px;
+`;
+
+export const HeaderContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const ContainerHome = styled.div`
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+export const Logo = styled.img`
+  width: 160px;
+  height: 40px;
+`;
+
+export const Nav = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  display: flex;
+`;
+
+export const NavLink = styled.a`
+  display: block;
+  padding: 0.5rem 0;
+  position: relative;
+  font-weight: 500;
+  color: #4a1176;
+  margin: 0 0 0 2rem;
+  &:hover {
+    color: #ff9900;
+  }
+`;
+
+export const ButtonNav = styled.a`
+  display: inline-block;
+  width: 8rem;
+  padding: 7px;
+  margin-left: 32px;
+  border: #4a1176 solid 1px;
+  font-size: 14px;
+  color: #4a1176;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 500;
+  &:hover {
+    color: #FFFFFF;
+    background: #FF9900;
+    transition-duration: .3s;
+    border: #FF9900 solid 1px;
+  }
+`;
+
 
