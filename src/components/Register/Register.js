@@ -45,7 +45,7 @@ function Register(props) {
         <React.Fragment>
             <styled.Container><div><h1>Registro</h1></div></styled.Container>
           	<styled.Divform isRight={true}>
-          	    <styled.Thumbnail />
+          	    <styled.LogoIcon />
           	    {/* componente de login con google (pendiente modificar condicionales) */}
           	    <LoginWithGoogle props={"Registrarse"} />
           	    <styled.ContainerButton><styled.Line></styled.Line><styled.TextO>ó</styled.TextO></styled.ContainerButton>

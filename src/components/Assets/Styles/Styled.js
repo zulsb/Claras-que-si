@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import logoicon from "../Images/logo-icon.png"
 
 
 /* Global
@@ -39,7 +40,7 @@ export const Container = styled.div`
     h1 {
       font-size: 36px;
       font-weight: 500;
-      color: #fff;
+      color: #FFFFFF;
       font-family: "Montserrat", sans-serif;
     }
   }
@@ -48,23 +49,22 @@ export const Container = styled.div`
 export const Divform = styled.form`
   outline: 0;
   position: relative;
-  background: #ffffff;
-  max-width: 300px;
+  background: #FFFFFF;
+  max-width: 350px;
   margin: 0 auto 2rem;
   padding: 30px;
   border-radius: 8px;
   text-align: center;
-  min-height: ${({ isRight }) => (isRight ? "550px" : "488px")};
+  min-height: ${({ isRight }) => (isRight ? "565px" : "500px")};
 `;
 
-export const Thumbnail = styled.div`
-  background: #8537cc;
+export const LogoIcon = styled.img`
   width: 150px;
-  height: 150px;
   margin: 0 auto 30px;
   padding: 50px 30px;
-  border-radius: 100%;
-  box-sizing: border-box;
+  background-image: url(${logoicon});
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
 export const Input = styled.input`
@@ -75,9 +75,9 @@ export const Input = styled.input`
   margin: 0 0 15px;
   padding: 15px;
   border-radius: 8px;
-  box-sizing: border-box;
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
+  color: #4A1176;
 `;
 
 export const TextAcount = styled.div`
@@ -97,14 +97,19 @@ export const DivTextA = styled.div`
 `;
 
 export const Link = styled.a`
-  color: #8537cc;
+  color: #4A1176;
   text-decoration: none;
   cursor: pointer;
   font-weight: 500;
+  margin-left: 5px;
+
+  &:hover {
+    color: #FF9900;
+  }
 `;
 
 export const Button = styled.button`
-  background: #8537cc;
+  background: #4A1176;
   width: 100%;
   border: none;
   padding: 15px;
@@ -114,14 +119,19 @@ export const Button = styled.button`
   transition: all 0.3 ease;
   cursor: pointer;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: #FF9900;
+    color: #FFFFFF;
+  }
 `;
 
 export const Buttonline = styled(Button)`
   background: none;
   padding: 10px;
-  color: #8537cc;
+  color: #4A1176;
   transition: all 0.3 ease;
-  border: #8537cc 1px solid;
+  border: #4A1176 1px solid;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,8 +144,9 @@ export const Buttonline = styled(Button)`
   }
 
   &:hover {
-    background-color: #8537cc;
-    color: #ffffff;
+    color: #FF9900;
+    border-color: #FF9900;
+    background-color: transparent;
   }
 `;
 
@@ -145,7 +156,7 @@ export const ContainerButton = styled.div`
   margin-top: 5px;
   position: relative;
   height: 25px;
-  padding: 20px;
+  padding: 30px;
 `;
 
 export const Line = styled.div`
