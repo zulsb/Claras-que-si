@@ -241,7 +241,7 @@ export const ButtonNav = styled.a`
 ============================= */
 
 export const FooterSection = styled.footer`
-  background: #fff;
+  background: #F2F0F0;
   border-top: 13px solid #FF9900;
   border-bottom: 13px solid #4A1176;
   padding: 30px;
