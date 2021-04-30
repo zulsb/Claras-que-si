@@ -207,8 +207,11 @@ export const ContainerHome = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 160px;
-  height: 40px;
+  width: 220px;
+`;
+
+export const LogoIconFooter = styled.img`
+  width: 60px;
 `;
 
 export const Nav = styled.ul`
