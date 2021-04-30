@@ -5,6 +5,9 @@ import styled, { createGlobalStyle } from "styled-components";
 ============================= */
 
 export const GlobalStyle = createGlobalStyle`
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
 
   body {
     top: 0;
@@ -245,10 +248,11 @@ export const FooterSection = styled.footer`
   border-top: 13px solid #FF9900;
   border-bottom: 13px solid #4A1176;
   padding: 30px;
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  width: 95.5%;
-  div{    
+  left: 0;
+  width: 100%;
+  div{
     display: flex;
     justify-content: center;
   }
