@@ -245,7 +245,7 @@ export const FooterSection = styled.footer`
   border-top: 13px solid #FF9900;
   border-bottom: 13px solid #4A1176;
   padding: 30px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 95.5%;
   div{    
