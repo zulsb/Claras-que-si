@@ -237,4 +237,21 @@ export const ButtonNav = styled.a`
   }
 `;
 
+/* Footer
+============================= */
+
+export const FooterSection = styled.footer`
+  background: #fff;
+  border-top: 13px solid #FF9900;
+  border-bottom: 13px solid #4A1176;
+  padding: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 95.5%;
+  div{    
+    display: flex;
+    justify-content: center;
+  }
+`;
+
 

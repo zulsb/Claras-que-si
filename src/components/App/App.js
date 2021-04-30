@@ -7,6 +7,7 @@ import {GlobalStyle} from "../Assets/Styles/Styled";
 import * as styled from "../Assets/Styles/Styled";
 import { useUser } from 'reactfire';
 import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 
 // trigger para cambio de estado (modificar segun sea 
@@ -40,6 +41,7 @@ function App() {
       <React.Fragment>
         <Header></Header>
         <Icome></Icome>
+        <Footer></Footer>
       </React.Fragment>
     }
     </Suspense>
