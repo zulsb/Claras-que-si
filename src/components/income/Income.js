@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import 'firebase/firestore';
-import { useFirestore, useFirestoreCollectionData, useUser } from "reactfire";
-import Register from '../Register/Register';
+import { useFirestore, useUser } from "reactfire";
+import LogOut from '../LogOut/LogOut'
 
-function Icome(props) {
-  /* state de icome */
-  const icDef = {
+function Income(props) {
+  /* state de income */
+  const incDef = {
     category: 'non-category',
     currency: 'COP',
     created_at: new Date(),
@@ -13,51 +13,59 @@ function Icome(props) {
     updated_at: new Date(),
     subtotal: 0,
   };
-  const [icome, setIcome] = useState(icDef);
+  const [income, setIncome] = useState(incDef);
   const { data: user } = useUser();
-  const icomesRef = useFirestore().collection('users').doc(user.uid).collection('icomes');
-  const {data, status} = useFirestoreCollectionData(icomesRef);
-  /* Sumar los subtotales para el total/balance/saldo */
-  if (status === 'success') {
-    const balance = data.reduce((a, b) => a + b.subtotal, 0)
-    console.log('balance', balance);
-  }
+  const incomesRef = useFirestore().collection('users').doc(user.uid).collection('incomes');
 
   const changeValue = (event) => {
     let { name, value } = event.target;
     if (name === 'subtotal') {
       value = parseInt(value, 10);
     }
-    setIcome({
-      ...icome,
+    setIncome({
+      ...income,
       [name]: value
     })
   };
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    if (!icome.subtotal) {
+    if (!income.subtotal) {
       return;
     }
-    console.log(icome);
-    setIcome({...icome, created_at: new Date(), updated_at: new Date()});
-    await icomesRef.doc().set(icome);
-    setIcome(icDef);
+    try {
+      const subtotal = (await incomesRef.doc('total').get()).data()
+      await incomesRef.doc('total').update({
+        total: subtotal.total + income.subtotal,
+        updated_at: new Date(),
+      })
+    } catch (e) {
+      await incomesRef.doc('total').set({
+        total: income.subtotal,
+        created_at: new Date(),
+        updated_at: new Date(),
+      })
+    }
+
+    let month = new Date().toLocaleString('default', { month: 'short' });
+    setIncome({...income, created_at: new Date(), updated_at: new Date()});
+    await incomesRef.doc('months').collection(month).doc().set(income);
+    setIncome(incDef);
   }
 
   return (
     <React.Fragment>
       <form>
         <label htmlFor="subtotal">Nuevo ingreso: </label>
-        <input id='subtotal' name="subtotal" value={icome.subtotal} onChange={changeValue} type="number" pattern="[0-9]*" />
+        <input id='subtotal' name="subtotal" value={income.subtotal} onChange={changeValue} type="number" pattern="[0-9]*" />
         <label htmlFor="category">Categoria: </label>
         <input id='category' name="category" onChange={changeValue} type="text" />
         <label htmlFor="note">Nota: </label>
-        <textarea id='note' name="note" value={icome.note} onChange={changeValue} cols="30" rows="10" />
+        <textarea id='note' name="note" value={income.note} onChange={changeValue} cols="30" rows="10" />
         <button onClick={onSubmit}>Agregar</button>
       </form>
-      <Register></Register>
+      <LogOut></LogOut>
     </React.Fragment>
   )
 }
-export default Icome;
+export default Income;

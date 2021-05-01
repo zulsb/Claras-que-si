@@ -8,7 +8,6 @@ import * as styled from "../Assets/Styles/Styled";
 function Register(props) {
   const firebase = useFirebaseApp();
   const user = useUser();
-  const userTest = firebase.auth().currentUser;
   const [register, setRegister] = useState({
     userName: "",
     email: "",
@@ -33,11 +32,7 @@ function Register(props) {
       [name]: value,
     });
   };
-  const logOut = async () => {
-    await firebase.auth().signOut();
-    console.log(user);
-  };
-  console.log(userTest);
+
   return (
     <React.Fragment>
       {/* Solo se mostrará si no hay un usuario logeado */}
@@ -59,8 +54,6 @@ function Register(props) {
           	</styled.Divform>
         </React.Fragment>
       )}
-      {/* Solo se mostrará si no hay un usuario logeado */}
-      {user.data && <styled.Button onClick={logOut}>Cerrar session</styled.Button>}
     </React.Fragment>
   );
 }

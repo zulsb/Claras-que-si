@@ -2,7 +2,7 @@ import React, { Suspense, useState } from 'react';
 import './App.css';
 import Login from '../Login/Login';
 import Register from '../Register/Register';
-import Icome from '../income/Income';
+import Income from '../income/Income';
 import {GlobalStyle} from "../Assets/Styles/Styled";
 import * as styled from "../Assets/Styles/Styled";
 import { useUser } from 'reactfire';
@@ -40,7 +40,7 @@ function App() {
     { user &&
       <React.Fragment>
         <Header></Header>
-        <Icome></Icome>
+        <Income></Income>
         <Footer></Footer>
       </React.Fragment>
     }
