@@ -20,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     font-family: "Montserrat", sans-serif;
+    background-repeat: no-repeat;
 	}  
 `;
 
@@ -254,6 +255,82 @@ export const ButtonNav = styled.a`
   }
 `;
 
+/* Body
+============================= */
+
+export const BodySection = styled.section`
+  color: #4A1176;
+  background: #E5E5E5;
+  padding: 4rem;
+`;
+
+export const Col12 = styled.li`
+  width: calc((100% / 2));
+`;
+
+export const Col13 = styled(Col12)`
+  width: calc((100% / 3));
+`;
+
+export const UlRow = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+`;
+
+export const BarsIn = styled.div`  
+    display: block;
+    padding: 1.7rem;
+    background-color: #B153F9;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+`;
+
+export const BarsOu = styled(BarsIn)`  
+    background-color: #FF9900;
+    border-radius: 0 5px 5px 0;  
+`;
+
+
+export const CardIn = styled.div`
+  text-align: center;
+  span{
+    font-size: 22px;
+  }
+`;
+
+// Saldo
+
+export const SaldoSection = styled.section`
+  color: #FFFFFF;
+  background: #4A1176;
+  padding: 5px;
+`;
+
+export const SaldoNumber = styled.div`
+  text-align: end;
+`;
+
+// Calendar
+
+export const CalendarSection = styled.section`
+  background: #B153F9;
+  padding: 25px;
+`;
+
+export const CardCalendar = styled.div`
+  span{
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+  }
+    
+`;
+
 /* Footer
 ============================= */
 
@@ -262,7 +339,6 @@ export const FooterSection = styled.footer`
   border-top: 13px solid #FF9900;
   border-bottom: 13px solid #4A1176;
   padding: 30px;
-  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
