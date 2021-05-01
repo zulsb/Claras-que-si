@@ -1,5 +1,6 @@
 import React from 'react';
 import * as styled from "../Assets/Styles/Styled";
+import logo from "../Assets/Images/logo.png"
 
 function Header() {
     return (
@@ -7,7 +8,7 @@ function Header() {
             <styled.Header>
                     <styled.ContainerHome>
                         <styled.HeaderContainer>
-                            <div><styled.Logo src="" alt="Logo"/></div> 
+                            <div><styled.Logo src={logo} alt="Logo"/></div> 
                             <nav>
                                 <styled.Nav>
                                     <li><styled.NavLink>Inicio</styled.NavLink></li>

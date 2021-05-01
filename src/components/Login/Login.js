@@ -30,7 +30,7 @@ function Login(props) {
     <React.Fragment>
       <styled.Container><div><h1>Iniciar Sesión</h1></div></styled.Container>
       <styled.Divform>
-          <styled.Thumbnail />
+          <styled.LogoIcon />
           <LoginWithGoogle props={"Ingresar"} />
           <styled.ContainerButton><styled.Line></styled.Line><styled.TextO>ó</styled.TextO></styled.ContainerButton>
           <styled.Input id="email" name="email" type="text" autoComplete="username"
