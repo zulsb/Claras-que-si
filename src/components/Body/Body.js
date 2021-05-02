@@ -1,5 +1,6 @@
 import React from 'react';
 import * as styled from "../Assets/Styles/Styled";
+import Calendar from "../Calendar/Calendar"
 
 function Body() {
     return (
@@ -50,7 +51,7 @@ function Body() {
                         </styled.Col13>
                         <styled.Col13>
                             <styled.CardCalendar>
-                                <span>Abril</span>
+                                <Calendar/>
                             </styled.CardCalendar>
                         </styled.Col13>
                         <styled.Col13>
