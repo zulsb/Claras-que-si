@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuth } from 'reactfire';
-import { Button } from '../Assets/Styles/Styled';
+import { ButtonNav } from '../Assets/Styles/Styled';
 
 function LogOut(props) {
   const auth = useAuth();
@@ -8,7 +8,7 @@ function LogOut(props) {
     await auth.signOut();
   }
   return (
-    <Button onClick={logOut}>Cerrar sesión</Button>
+    <ButtonNav onClick={logOut}>Cerrar sesión</ButtonNav>
   );
 }
 
