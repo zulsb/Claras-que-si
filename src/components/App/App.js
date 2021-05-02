@@ -1,14 +1,22 @@
-import React, { Suspense, useState } from 'react';
+import React, { useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
+import { SuspenseWithPerf } from 'reactfire'
 import './App.css';
 import Login from '../Login/Login';
 import Register from '../Register/Register';
-// import Income from '../income/Income';
 import {GlobalStyle} from "../Assets/Styles/Styled";
 import * as styled from "../Assets/Styles/Styled";
 import { useUser } from 'reactfire';
 import Header from '../Header/Header';
 import Body from '../Body/Body';
 import Footer from '../Footer/Footer';
+import Notification from '../Notifications/Notification';
+import Categories from '../Categories/Categories'
+import Income from '../Income/Income';
 
 
 // trigger para cambio de estado (modificar segun sea 
@@ -27,26 +35,36 @@ function App() {
   }
   const { data: user } = useUser();
   return (
-    <Suspense fallback={<div>...loading</div>}>
+    <SuspenseWithPerf fallback={<div>...loading</div>}>
     <GlobalStyle />
-    {!user &&
-      <React.Fragment>
-          {state === 'login' && (<Login></Login>)}
-          {state === 'register' && (<Register></Register>)}
-          <styled.DivTextA>
-            <ChangeLogin login={triggerLoginState} state={state} />
-          </styled.DivTextA>
-      </React.Fragment>
-    }
-    { user &&
-      <React.Fragment>
-        <Header></Header>
-        {/* <Income></Income> */}
-        <Body></Body>
-        <Footer></Footer>
-      </React.Fragment>
-    }
-    </Suspense>
+    <Router>
+    { user && <Header></Header> }
+      <Switch>
+        <Route exact path="/">
+          {!user &&
+            <React.Fragment>
+                {state === 'login' && (<Login></Login>)}
+                {state === 'register' && (<Register></Register>)}
+                <styled.DivTextA>
+                  <ChangeLogin login={triggerLoginState} state={state} />
+                </styled.DivTextA>
+            </React.Fragment>
+          }
+          { user && <Body></Body> }
+        </Route>
+        <Route path="/alarms">
+          <Notification></Notification>
+        </Route>
+        <Route path="/categories">
+          <Categories></Categories>
+        </Route>
+        <Route path="/incomes">
+          <Income></Income>
+        </Route>
+      </Switch>
+      { user && <Footer></Footer> }
+    </Router>
+    </SuspenseWithPerf>
   );
 }
 
