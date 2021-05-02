@@ -155,6 +155,7 @@ export default class App extends Component {
         </div> */}
         <div className="upcoming-meetings">
           <div className="current-time">{time}</div>
+          <iframe src="https://calendar.google.com/calendar/embed?height=300&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FBogota&amp;src=b284cmhndXY5aDdyaGZiNDJubnUyNm5kanNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23A79B8E&amp;showTz=0&amp;showCalendars=0&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;hl=es_419&amp;showNav=1&amp;showDate=1" title="Calendario" style={{ border: 0}} width="300" height="300" frameborder="0" scrolling="no"></iframe>
           {/* <h1>Upcoming Meetings</h1> */}
           <div className="list-group">
             {this.state.isLoading && loadingState}
