@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
-import logoicon from "../Images/logo-icon.png"
+import logoicon from "../Images/logo-icon.png";
+import patronfooter from "../Images/patron-group-footer.svg";
 
 
 /* Global
@@ -336,6 +337,10 @@ export const CardCalendar = styled.div`
 
 export const FooterSection = styled.footer`
   background: #F2F0F0;
+  background-image: url(${patronfooter});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border-top: 13px solid #FF9900;
   border-bottom: 13px solid #4A1176;
   padding: 22px;
