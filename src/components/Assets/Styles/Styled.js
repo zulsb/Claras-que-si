@@ -289,7 +289,7 @@ export const BarsIn = styled.div`
     background-color: #B153F9;
     text-align: center;
     text-decoration: none;
-    border-radius: 5px 0 0 5px;
+    border-radius: 0 5px 5px 0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
     background-image: url(${patron});
     background-repeat: no-repeat;
@@ -301,7 +301,7 @@ export const BarsIn = styled.div`
 
 export const BarsOu = styled(BarsIn)`  
     background-color: #FF9900;
-    border-radius: 0 5px 5px 0;
+    border-radius: 5px 0 0 5px;
     background-position: left;
 `;
 
