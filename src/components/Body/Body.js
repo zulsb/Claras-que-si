@@ -1,7 +1,7 @@
 import React from 'react';
 import * as styled from "../Assets/Styles/Styled";
 import Calendar from "../Calendar/Calendar";
-import { MdAddCircle } from "react-icons/md";
+import { MdAddCircle, MdChevronLeft, MdChevronRight } from "react-icons/md";
 
 function Body() {
     return (
@@ -46,8 +46,8 @@ function Body() {
                 <styled.ContainerHome>
                     <styled.UlRow>
                         <styled.Col13>
-                            <styled.CardCalendar>
-                                <span>Marzo</span>
+                            <styled.CardCalendar>                                
+                                <span><MdChevronLeft /> Marzo</span>
                             </styled.CardCalendar>
                         </styled.Col13>
                         <styled.Col13>
@@ -57,7 +57,7 @@ function Body() {
                         </styled.Col13>
                         <styled.Col13>
                             <styled.CardCalendar>
-                                <span>Mayo</span>
+                                <span>Mayo <MdChevronRight /></span>
                             </styled.CardCalendar>
                         </styled.Col13>
                     </styled.UlRow>
