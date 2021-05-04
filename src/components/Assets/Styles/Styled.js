@@ -1,6 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components";
 import logoicon from "../Images/logo-icon.png";
 import patronfooter from "../Images/patron-group-footer.svg";
+import patron from "../Images/patron.png"
 
 
 /* Global
@@ -231,6 +232,7 @@ export const NavLink = styled.a`
   font-weight: 500;
   color: #4a1176;
   margin: 0 0 0 2rem;
+  cursor: pointer;
   &:hover {
     color: #ff9900;
   }
@@ -289,11 +291,18 @@ export const BarsIn = styled.div`
     text-decoration: none;
     border-radius: 5px 0 0 5px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    background-image: url(${patron});
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 5rem;
+    transform: scaleX(-1);
+    cursor: pointer;
 `;
 
 export const BarsOu = styled(BarsIn)`  
     background-color: #FF9900;
-    border-radius: 0 5px 5px 0;  
+    border-radius: 0 5px 5px 0;
+    background-position: left;
 `;
 
 

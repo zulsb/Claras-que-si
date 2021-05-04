@@ -1,6 +1,7 @@
 import React from 'react';
 import * as styled from "../Assets/Styles/Styled";
-import Calendar from "../Calendar/Calendar"
+import Calendar from "../Calendar/Calendar";
+import { MdAddCircle } from "react-icons/md";
 
 function Body() {
     return (
@@ -8,8 +9,8 @@ function Body() {
             <styled.BodySection>
                 <styled.ContainerHome>
                     <styled.UlRow>
-                        <styled.Col12><styled.BarsIn /></styled.Col12>
-                        <styled.Col12><styled.BarsOu /></styled.Col12>
+                        <styled.Col12><styled.BarsIn /><MdAddCircle size="3rem" color="#FFFFFF" style={{ position: "relative", bottom: "3.1rem", left: "0" }} /></styled.Col12>
+                        <styled.Col12><styled.BarsOu /><MdAddCircle size="3rem" color="#FFFFFF" style={{ position: "relative", bottom: "3.1rem", left: "27rem" }} /></styled.Col12>
                     </styled.UlRow>
                     <styled.UlRow>
                         <styled.Col12>
