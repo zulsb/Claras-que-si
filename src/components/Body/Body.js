@@ -9,8 +9,8 @@ function Body() {
             <styled.BodySection>
                 <styled.ContainerHome>
                     <styled.UlRow>
-                        <styled.Col12><styled.BarsIn /><MdAddCircle size="3rem" color="#FFFFFF" style={{ position: "relative", bottom: "3.1rem", left: "0" }} /></styled.Col12>
-                        <styled.Col12><styled.BarsOu /><MdAddCircle size="3rem" color="#FFFFFF" style={{ position: "relative", bottom: "3.1rem", left: "27rem" }} /></styled.Col12>
+                        <styled.Col12><styled.BarsIn /><MdAddCircle size="2.3rem" color="#FFFFFF" style={{ position: "relative", bottom: "2.8rem", left: "0.6rem" }} /></styled.Col12>
+                        <styled.Col12><styled.BarsOu /><MdAddCircle size="2.3rem" color="#FFFFFF" style={{ position: "relative", bottom: "2.8rem", left: "27rem" }} /></styled.Col12>
                     </styled.UlRow>
                     <styled.UlRow>
                         <styled.Col12>
@@ -20,10 +20,10 @@ function Body() {
                             </styled.CardIn>
                         </styled.Col12>
                         <styled.Col12>
-                            <styled.CardIn>
+                            <styled.CardOu>
                                 <h2>Total Gastos</h2>
                                 <span>$ 0 COP</span>
-                            </styled.CardIn>
+                            </styled.CardOu>
                         </styled.Col12>
                     </styled.UlRow>
                 </styled.ContainerHome>

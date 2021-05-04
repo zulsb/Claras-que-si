@@ -313,6 +313,10 @@ export const CardIn = styled.div`
   }
 `;
 
+export const CardOu = styled(CardIn)`  
+  color: #FF9900;
+`;
+
 // Saldo
 
 export const SaldoSection = styled.section`
