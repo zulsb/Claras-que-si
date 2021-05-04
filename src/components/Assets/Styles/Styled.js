@@ -305,6 +305,15 @@ export const BarsOu = styled(BarsIn)`
     background-position: left;
 `;
 
+export const IconBack = styled.div`
+  display: flex;
+  justify-content: center;
+  img {
+    position: absolute;
+    width: 25rem;
+    top: 9rem;
+  }
+`;
 
 export const CardIn = styled.div`
   text-align: center;
