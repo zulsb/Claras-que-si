@@ -13,9 +13,9 @@ function Header() {
                             <div><styled.Logo src={logo} alt="Logo"/></div> 
                             <nav>
                                 <styled.Nav>
-                                    <li><styled.NavLink><MdHome style={{ position: "relative", top: "2px"}} /> Inicio</styled.NavLink></li>
-                                    <li><styled.NavLink><MdNotifications style={{ position: "relative", top: "2px"}} /> Notificaciones</styled.NavLink></li>
-                                    <li><styled.NavLink><MdPerson style={{ position: "relative", top: "2px"}} /> Perfil</styled.NavLink></li>
+                                    <li><styled.NavLink><MdHome style={{ verticalAlign: "top" }} /> Inicio</styled.NavLink></li>
+                                    <li><styled.NavLink><MdNotifications style={{ verticalAlign: "top" }} /> Notificaciones</styled.NavLink></li>
+                                    <li><styled.NavLink><MdPerson style={{ verticalAlign: "top" }} /> Perfil</styled.NavLink></li>
                                     <li><LogOut>Cerrar sesión</LogOut></li>
                                 </styled.Nav>
                             </nav>
