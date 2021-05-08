@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import 'firebase/firestore';
 import { useFirestore, useFirestoreCollectionData, useUser } from "reactfire";
-import LogOut from '../LogOut/LogOut'
 
 function Income(props) {
   /* state de income */
@@ -95,7 +94,6 @@ function Income(props) {
         <textarea id='note' name="note" value={income.note} onChange={changeValue} cols="30" rows="10" />
         <button onClick={onSubmit}>Agregar</button>
       </form>
-      <LogOut></LogOut>
     </React.Fragment>
   )
 }
