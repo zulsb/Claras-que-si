@@ -1,6 +1,8 @@
 import React from 'react';
 import * as styled from "../Assets/Styles/Styled";
-import Calendar from "../Calendar/Calendar"
+import patron from "../Assets/Images/patron.svg";
+import Calendar from "../Calendar/Calendar";
+import { MdAddCircle, MdChevronLeft, MdChevronRight } from "react-icons/md";
 
 function Body() {
     return (
@@ -8,9 +10,10 @@ function Body() {
             <styled.BodySection>
                 <styled.ContainerHome>
                     <styled.UlRow>
-                        <styled.Col12><styled.BarsIn /></styled.Col12>
-                        <styled.Col12><styled.BarsOu /></styled.Col12>
+                        <styled.Col12><styled.BarsIn /><MdAddCircle size="2.3rem" color="#FFFFFF" style={{ position: "relative", bottom: "2.8rem", left: "0.6rem" }} /></styled.Col12>
+                        <styled.Col12><styled.BarsOu /><MdAddCircle size="2.3rem" color="#FFFFFF" style={{ position: "relative", bottom: "2.8rem", left: "27rem" }} /></styled.Col12>
                     </styled.UlRow>
+                    <styled.IconBack><img src={patron} alt="Patron background" /></styled.IconBack>
                     <styled.UlRow>
                         <styled.Col12>
                             <styled.CardIn>
@@ -19,10 +22,10 @@ function Body() {
                             </styled.CardIn>
                         </styled.Col12>
                         <styled.Col12>
-                            <styled.CardIn>
+                            <styled.CardOu>
                                 <h2>Total Gastos</h2>
                                 <span>$ 0 COP</span>
-                            </styled.CardIn>
+                            </styled.CardOu>
                         </styled.Col12>
                     </styled.UlRow>
                 </styled.ContainerHome>
@@ -45,8 +48,8 @@ function Body() {
                 <styled.ContainerHome>
                     <styled.UlRow>
                         <styled.Col13>
-                            <styled.CardCalendar>
-                                <span>Marzo</span>
+                            <styled.CardCalendar>                                
+                                <span><MdChevronLeft /> Marzo</span>
                             </styled.CardCalendar>
                         </styled.Col13>
                         <styled.Col13>
@@ -56,7 +59,7 @@ function Body() {
                         </styled.Col13>
                         <styled.Col13>
                             <styled.CardCalendar>
-                                <span>Mayo</span>
+                                <span>Mayo <MdChevronRight /></span>
                             </styled.CardCalendar>
                         </styled.Col13>
                     </styled.UlRow>
