@@ -22,7 +22,7 @@ import Income from '../Income/Income';
 // trigger para cambio de estado (modificar segun sea 
 // necesario para mostrar login o registro )
 const ChangeLogin = (props) => {
-  return <styled.TextAcount onClick={props.login} isRight={true}>{props.state === 'register' ? 'Ya' : 'No'} tienes cuenta? <styled.Link> {props.state === 'register' ? ' Iniciar sesión' : ' Registrarse'}</styled.Link></styled.TextAcount>
+  return <styled.TextAcount onClick={props.login} isRight={true}>{props.state === 'register' ? 'Ya' : 'No'} tienes cuenta? <styled.LinkStyle> {props.state === 'register' ? ' Iniciar sesión' : ' Registrarse'}</styled.LinkStyle></styled.TextAcount>
 }
 
 function App() {
@@ -52,7 +52,7 @@ function App() {
           }
           { user && <Body></Body> }
         </Route>
-        <Route path="/alarms">
+        <Route path="/notifications">
           <Notification></Notification>
         </Route>
         <Route path="/categories">

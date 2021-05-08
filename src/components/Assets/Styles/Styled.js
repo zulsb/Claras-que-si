@@ -1,7 +1,9 @@
 import styled, { createGlobalStyle } from "styled-components";
 import logoicon from "../Images/logo-icon.png";
 import patronfooter from "../Images/patron-group-footer.svg";
-import patron from "../Images/patron.png"
+import patron from "../Images/patron.png";
+import { MdHome, MdNotifications, MdPerson } from "react-icons/md";
+
 
 
 /* Global
@@ -99,7 +101,7 @@ export const DivTextA = styled.div`
   position: relative;
 `;
 
-export const Link = styled.a`
+export const LinkStyle = styled.a`
   color: #4A1176;
   text-decoration: none;
   cursor: pointer;
@@ -225,7 +227,7 @@ export const Nav = styled.ul`
   display: flex;
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled.div`
   display: block;
   padding: 0.5rem 0;
   position: relative;
@@ -233,9 +235,24 @@ export const NavLink = styled.a`
   color: #4a1176;
   margin: 0 0 0 2rem;
   cursor: pointer;
-  &:hover {
+  a {
+    text-decoration: none;
+    &:hover {
     color: #ff9900;
+    }
   }
+`;
+
+export const HomeIcon = styled(MdHome)`
+  vertical-align: top;
+`;
+
+export const NotiIcon = styled(MdNotifications)`
+  vertical-align: top;
+`;
+
+export const UserIcon = styled(MdPerson)`
+  vertical-align: top;
 `;
 
 export const ButtonNav = styled.a`
@@ -332,6 +349,7 @@ export const SaldoSection = styled.section`
   color: #FFFFFF;
   background: #4A1176;
   padding: 5px;
+  border-bottom: 6px solid #b153f952;
 `;
 
 export const SaldoNumber = styled.div`
