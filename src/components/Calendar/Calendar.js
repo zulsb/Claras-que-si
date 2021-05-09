@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import moment from "moment";
-import { GOOGLE_API_KEY, CALENDAR_ID } from "./config.js";
+/* import { GOOGLE_API_KEY, CALENDAR_ID } from "./config.js"; */
 
 
 export default class App extends Component {
@@ -16,16 +16,16 @@ export default class App extends Component {
   }
 
   componentDidMount = () => {
-    this.getEvents();
+    /* this.getEvents(); */
     setInterval(() => {
       this.tick();
     }, 1000);
-    setInterval(() => {
+/*     setInterval(() => {
       this.getEvents();
-    }, 60000);
+    }, 60000); */
   };
 
-  getEvents() {
+/*   getEvents() {
     let that = this;
     function start() {
       window.gapi.client
@@ -74,7 +74,7 @@ export default class App extends Component {
     }
     window.gapi.load("client", start);
   }
-
+ */
   tick = () => {
     let time = moment().format("dddd Do MMMM YYYY, hh:mm:ss A");
     this.setState({
