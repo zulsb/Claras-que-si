@@ -81,14 +81,14 @@ export const Input = styled.input`
   border-radius: 8px;
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
-  color: #4A1176;
+  color: ${({ isExpense }) => (isExpense ? "#FF9900" : "#4A1176")};
 `;
 
 export const InputIn = styled(Input)`
   position: relative;
   background: transparent;
   border: none;
-  border-bottom: 2px solid #4A1176;
+  border-bottom: 2px solid ${({ isExpense }) => (isExpense ? "#FF9900" : "#4A1176")};
   border-radius: 0;
 `;
 
@@ -98,6 +98,7 @@ export const Label = styled.label`
   font-weight: 600;
   display: flex;
   justify-content: center;
+  color: ${({ isExpenseLabel }) => (isExpenseLabel ? "#FF9900" : "#4A1176")};
 `;
 
 export const Textarea = styled.textarea`
@@ -105,7 +106,7 @@ export const Textarea = styled.textarea`
   position: relative;
   background: transparent;
   border: none;
-  border-bottom: 2px solid #4A1176;
+  border-bottom: 2px solid ${({ isExpense }) => (isExpense ? "#FF9900" : "#4A1176")};
   border-radius: 0;
   width: 100%;
   margin: 0 0 15px;
@@ -113,6 +114,7 @@ export const Textarea = styled.textarea`
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   resize: none;
+  color: ${({ isExpense }) => (isExpense ? "#FF9900" : "#4A1176")};
 `;
 
 export const TextAcount = styled.div`
@@ -157,7 +159,7 @@ export const Button = styled.button`
   position: relative;
 
   &:hover {
-    background-color: #FF9900;
+    background-color: ${({ isExpenseButton }) => (isExpenseButton ? "#B153F9" : "#FF9900")};;
     color: #FFFFFF;
   }
 `;
@@ -166,6 +168,7 @@ export const ButtonIn = styled(Button)`
   width: 25%;
   display: block;
   margin: 2rem auto;
+  background-color: ${({ isExpenseButton }) => (isExpenseButton ? "#FF9900" : "#B153F9")};;
 `;
 
 export const Buttonline = styled(Button)`
@@ -365,7 +368,7 @@ export const BarsIn = styled.div`
 export const BarsOu = styled(BarsIn)`  
     background-color: #FF9900;
     border-radius: 5px 0 0 5px;
-    background-position: left;
+    background-position: ${({ isExpenseBar }) => (isExpenseBar ? "right" : "left")};
 `;
 
 export const IconBack = styled.div`
@@ -406,6 +409,7 @@ export const AddIconBack = styled(MdKeyboardReturn)`
 
 export const CardIn = styled.div`
   text-align: center;
+  position: relative;
   span{
     font-size: 22px;
   }

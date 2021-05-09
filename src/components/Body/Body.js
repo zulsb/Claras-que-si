@@ -20,6 +20,12 @@ function Body() {
     const expensesRef = useFirestore().collection('users').doc(user.uid).collection('expenses').doc('months').collection(month);
     const { data: incData, status: incSt } = useFirestoreCollectionData(incomesRef);
     const { data: expData, status: expSt } = useFirestoreCollectionData(expensesRef);
+    let prevMonth = new Date()
+    prevMonth.setMonth(prevMonth.getMonth() - 1)
+    prevMonth = prevMonth.toLocaleDateString('es-Co', {month: 'long'})
+    let nextMonth = new Date()
+    nextMonth.setMonth(nextMonth.getMonth() + 1)
+    nextMonth = nextMonth.toLocaleDateString('es-Co', {month: 'long'})
     /* Set states */
     useEffect(() => {
         let isMounted = true;
@@ -71,7 +77,7 @@ function Body() {
                     <styled.UlRow>
                         <styled.Col13>
                             <styled.CardCalendar>
-                                <span><MdChevronLeft /> Marzo</span>
+                                <span><MdChevronLeft />{prevMonth} {date.getFullYear()}</span>
                             </styled.CardCalendar>
                         </styled.Col13>
                         <styled.Col13>
@@ -81,7 +87,7 @@ function Body() {
                         </styled.Col13>
                         <styled.Col13>
                             <styled.CardCalendar>
-                                <span>Mayo <MdChevronRight /></span>
+                                <span>{nextMonth} {date.getFullYear()}<MdChevronRight /></span>
                             </styled.CardCalendar>
                         </styled.Col13>
                     </styled.UlRow>

@@ -14,7 +14,7 @@ function Expense(props) {
     updated_at: new Date(),
     subtotal: 0,
   }
-  const date = new Date();
+  // const date = new Date();
   const [expense, setExpense] = useState(expDef);
   const [categories, setCategories] = useState([]);
 
@@ -86,18 +86,18 @@ function Expense(props) {
       <styled.BodySectionIn>
         <styled.ContainerHome>
           <styled.UlRow>
-              <styled.Col><styled.BarsIn /><Link to="/"><styled.AddIconBack size="2.3rem" /></Link></styled.Col>
+              <styled.Col><styled.BarsOu isExpenseBar={true} /><Link to="/"><styled.AddIconBack size="2.3rem" /></Link></styled.Col>
           </styled.UlRow>
           <styled.IconBack><img src={patron} alt="Patron background" /></styled.IconBack>      
           <form>
             <styled.UlRow>
               <styled.Col13>
-                <styled.Label htmlFor="subtotal">Nuevo egreso</styled.Label>
-                <styled.InputIn id='subtotal' name="subtotal" value={expense.subtotal} onChange={changeValue} type="number" pattern="[0-9]*" />
+                <styled.Label isExpenseLabel={true} htmlFor="subtotal">Nuevo egreso</styled.Label>
+                <styled.InputIn isExpense={true} id='subtotal' name="subtotal" value={expense.subtotal} onChange={changeValue} type="number" pattern="[0-9]*" />
               </styled.Col13>
               <styled.Col13>
-                <styled.Label htmlFor="category">Categoría</styled.Label>
-                <styled.InputIn id='category' name="category" onChange={changeValue} type="text" list='categories' />
+                <styled.Label isExpenseLabel={true} htmlFor="category">Categoría</styled.Label>
+                <styled.InputIn isExpense={true} id='category' name="category" onChange={changeValue} type="text" list='categories' />
                 <datalist id='categories'>
                   {user && categories.map(cat => {
                     if (cat.name !== 'non-category') {
@@ -108,11 +108,11 @@ function Expense(props) {
                 </datalist>
               </styled.Col13>
               <styled.Col13>
-                <styled.Label htmlFor="note">Nota</styled.Label>
-                <styled.Textarea id='note' name="note" value={expense.note} onChange={changeValue} rows="1" />
+                <styled.Label isExpenseLabel={true} htmlFor="note">Nota</styled.Label>
+                <styled.Textarea isExpense={true} id='note' name="note" value={expense.note} onChange={changeValue} rows="1" />
               </styled.Col13>
             </styled.UlRow>
-              <styled.ButtonIn onClick={onSubmit}>Agregar</styled.ButtonIn>
+              <styled.ButtonIn isExpenseButton={true} onClick={onSubmit}>Guardar</styled.ButtonIn>
           </form>
         </styled.ContainerHome>
       </styled.BodySectionIn>
@@ -121,7 +121,7 @@ function Expense(props) {
       <styled.SaldoSection>
           <styled.ContainerHome>
               <styled.UlRow>
-                  <styled.Col12><div><h3>Saldo Abril {date.getFullYear()}</h3></div></styled.Col12>
+                  <styled.Col12><div><h3>Saldo actual</h3></div></styled.Col12>
                   <styled.Col12>
                       <styled.SaldoNumber><h3>$ 0 COP</h3></styled.SaldoNumber>
                   </styled.Col12>

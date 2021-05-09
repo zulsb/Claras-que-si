@@ -116,7 +116,7 @@ function Income(props) {
                 <styled.Textarea id='note' name="note" value={income.note} onChange={changeValue} rows="1" />
               </styled.Col13>
             </styled.UlRow>
-              <styled.ButtonIn onClick={onSubmit}>Agregar</styled.ButtonIn>
+              <styled.ButtonIn onClick={onSubmit}>Guardar</styled.ButtonIn>
           </form>
         </styled.ContainerHome>
       </styled.BodySectionIn>
@@ -125,7 +125,7 @@ function Income(props) {
       <styled.SaldoSection>
           <styled.ContainerHome>
               <styled.UlRow>
-                  <styled.Col12><div><h3>Saldo Abril 2021</h3></div></styled.Col12>
+                  <styled.Col12><div><h3>Saldo actual</h3></div></styled.Col12>
                   <styled.Col12>
                       <styled.SaldoNumber><h3>$ 0 COP</h3></styled.SaldoNumber>
                   </styled.Col12>
