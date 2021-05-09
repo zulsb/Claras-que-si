@@ -3,8 +3,10 @@
 Una aplicacion de facil uso que permite llevar ingresos y egresos en orden, con la posibilidad de definir categorías y añadir notas a medida que se ingresan estos datos monetarios de manera tal que puedas llevar siempre y a la mano "tus cuentas claras".
 
 ---
-<div align= center>![logo Claras](src/components/Assets/Images/logo.png)</div>
+<div align= center><img src='src/components/Assets/Images/logo.png'></div>
+
 ---
+
 ### Como instalar
 
 Clonar el repositorio y seguir los pasos
