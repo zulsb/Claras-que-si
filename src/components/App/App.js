@@ -16,6 +16,7 @@ import Footer from '../Footer/Footer';
 import Notification from '../Notifications/Notification';
 import Categories from '../Categories/Categories'
 import Income from '../Income/Income';
+import Perfil from '../Perfil/Perfil';
 
 
 // trigger para cambio de estado (modificar segun sea 
@@ -59,6 +60,9 @@ function App() {
         </Route>
         <Route path="/incomes">
           <Income></Income>
+        </Route>
+        <Route path="/perfil">
+          <Perfil></Perfil>
         </Route>
       </Switch>
       { user && <Footer></Footer> }

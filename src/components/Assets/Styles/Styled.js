@@ -444,6 +444,22 @@ export const CardCalendar = styled.div`
     
 `;
 
+export const DivPerfil = styled.div`
+  position: relative;
+  background: #FFFFFF;
+  max-width: 30rem;
+  margin: 0 auto 2rem;
+  padding: 30px;
+  border-radius: 8px;
+  min-height: 16rem;
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+`;
+
+
 /* Footer
 ============================= */
 
