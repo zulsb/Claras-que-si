@@ -14,6 +14,7 @@ function Income(props) {
     currency: 'COP',
     created_at: new Date(),
     note: '',
+    expense: false,
     updated_at: new Date(),
     subtotal: 0,
   };
@@ -29,8 +30,10 @@ function Income(props) {
     let isMounted = true;
     const getCategories = async () => {
       const { docs } = await categoriesRef.get();
-      const allCategories = docs.map(doc => ({id: doc.id, ...doc.data()}))
-      setCategories(allCategories);
+      if (docs) {
+        const allCategories = docs.map(doc => ({id: doc.id, ...doc.data()}))
+        setCategories(allCategories);
+      }
     };
     if (isMounted) {
       getCategories();
