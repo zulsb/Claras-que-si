@@ -4,13 +4,12 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
-import { SuspenseWithPerf } from 'reactfire'
 import './App.css';
 import Login from '../Login/Login';
 import Register from '../Register/Register';
 import {GlobalStyle} from "../Assets/Styles/Styled";
 import * as styled from "../Assets/Styles/Styled";
-import { useUser } from 'reactfire';
+import { SuspenseWithPerf, useUser } from 'reactfire';
 import Header from '../Header/Header';
 import Body from '../Body/Body';
 import Footer from '../Footer/Footer';
@@ -35,7 +34,7 @@ function App() {
   }
   const { data: user } = useUser();
   return (
-    <SuspenseWithPerf fallback={<div>...loading</div>}>
+    <SuspenseWithPerf fallback={<div>loadig...</div>} traceId={'loading-comp'}>
     <GlobalStyle />
     <Router>
     { user && <Header></Header> }
