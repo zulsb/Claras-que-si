@@ -23,5 +23,5 @@ Una aplicacion de facil uso que permite llevar ingresos y egresos en orden, con 
     Desarrolladora front end y diseñadora gráfica
   - Github: [zulsb](https://github.com/zulsb)
 
-<p style= 'text-align: center'>Cohort 10</p>
-<p style= 'text-align: center'>Colombia - Cali - 2021</p>
+<p align= center>Cohort 10
+<p align= center>Colombia - Cali - 2021
