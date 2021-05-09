@@ -2,8 +2,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import logoicon from "../Images/logo-icon.png";
 import patronfooter from "../Images/patron-group-footer.svg";
 import patron from "../Images/patron.png";
-import { MdHome, MdNotifications, MdPerson } from "react-icons/md";
-
+import { MdHome, MdNotifications, MdPerson, MdAddCircle, MdKeyboardReturn } from "react-icons/md";
 
 
 /* Global
@@ -85,6 +84,37 @@ export const Input = styled.input`
   color: #4A1176;
 `;
 
+export const InputIn = styled(Input)`
+  position: relative;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #4A1176;
+  border-radius: 0;
+`;
+
+export const Label = styled.label`
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+`;
+
+export const Textarea = styled.textarea`
+  outline: 0;
+  position: relative;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #4A1176;
+  border-radius: 0;
+  width: 100%;
+  margin: 0 0 15px;
+  padding: 15px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  resize: none;
+`;
+
 export const TextAcount = styled.div`
   position: relative;
   display: flex;
@@ -124,11 +154,18 @@ export const Button = styled.button`
   transition: all 0.3 ease;
   cursor: pointer;
   text-transform: uppercase;
+  position: relative;
 
   &:hover {
     background-color: #FF9900;
     color: #FFFFFF;
   }
+`;
+
+export const ButtonIn = styled(Button)`
+  width: 25%;
+  display: block;
+  margin: 2rem auto;
 `;
 
 export const Buttonline = styled(Button)`
@@ -284,12 +321,21 @@ export const BodySection = styled.section`
   padding: 4rem;
 `;
 
+export const BodySectionIn = styled(BodySection)`
+  padding: 4rem 0 1rem;
+`;
+
+export const Col = styled.li`
+  width: 100%;
+`;
+
 export const Col12 = styled.li`
   width: calc((100% / 2));
 `;
 
 export const Col13 = styled(Col12)`
   width: calc((100% / 3));
+  padding: 0 2rem;
 `;
 
 export const UlRow = styled.ul`
@@ -329,6 +375,32 @@ export const IconBack = styled.div`
     position: absolute;
     width: 25rem;
     top: 9rem;
+  }
+`;
+
+export const AddIconLeft = styled(MdAddCircle)`
+  position: relative;
+  bottom: 2.8rem;
+  left: 0.6rem;
+  color: #FFFFFF;
+  &:hover{
+    color: #ffffffe0;
+    transform: scale(1.1, 1.1);
+  }
+`;
+
+export const AddIconRight = styled(AddIconLeft)`
+  left: 27rem;
+`;
+
+export const AddIconBack = styled(MdKeyboardReturn)`
+  position: relative;
+  bottom: 2.8rem;
+  left: 0.6rem;
+  color: #FFFFFF;
+  &:hover{
+    color: #ffffffe0;
+    transform: scale(1.1, 1.1);
   }
 `;
 

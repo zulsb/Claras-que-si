@@ -10,11 +10,11 @@ function Header() {
             <styled.Header>
                     <styled.ContainerHome>
                         <styled.HeaderContainer>                            
-                            <div><styled.Logo src={logo} alt="Logo"/></div> 
+                            <Link to={"/"}><styled.Logo src={logo} alt="Logo"/></Link> 
                             <styled.Nav>
                                 <li><styled.NavLink><Link to={"/"}><styled.HomeIcon /> Inicio</Link></styled.NavLink></li>
                                 <li><styled.NavLink><Link to={"/notifications"}><styled.NotiIcon /> Notificaciones</Link></styled.NavLink></li>
-                                <li><styled.NavLink><Link to={"/income"}><styled.UserIcon /> Perfil</Link></styled.NavLink></li>
+                                <li><styled.NavLink><Link to={"/incomes"}><styled.UserIcon /> Perfil</Link></styled.NavLink></li>
                                 <li><LogOut>Cerrar sesión</LogOut></li>
                             </styled.Nav>
                         </styled.HeaderContainer>

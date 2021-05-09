@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import 'firebase/firestore';
 import { useFirestore, useFirestoreCollectionData, useUser } from "reactfire";
-import LogOut from '../LogOut/LogOut'
+import * as styled from "../Assets/Styles/Styled";
+import patron from "../Assets/Images/patron.svg";
+import { Link } from 'react-router-dom';
+
+
 
 function Income(props) {
   /* state de income */
@@ -78,24 +82,51 @@ function Income(props) {
 
   return (
     <React.Fragment>
-      <form>
-        <label htmlFor="subtotal">Nuevo ingreso: </label>
-        <input id='subtotal' name="subtotal" value={income.subtotal} onChange={changeValue} type="number" pattern="[0-9]*" />
-        <label htmlFor="category">Categoria: </label>
-        <input id='category' name="category" onChange={changeValue} type="text" list='categories' />
-        <datalist id='categories'>
-          {user && categories.map(cat => {
-            if (cat.name !== 'non-category') {
-              return <option key={cat.id} value={cat.name}>{cat.name}</option>
-            }
-            return (<option key={cat.id} value=""></option>);
-          })}
-        </datalist>
-        <label htmlFor="note">Nota: </label>
-        <textarea id='note' name="note" value={income.note} onChange={changeValue} cols="30" rows="10" />
-        <button onClick={onSubmit}>Agregar</button>
-      </form>
-      <LogOut></LogOut>
+      <styled.BodySectionIn>
+        <styled.ContainerHome>
+          <styled.UlRow>
+              <styled.Col><styled.BarsIn /><Link to="/"><styled.AddIconBack size="2.3rem" /></Link></styled.Col>
+          </styled.UlRow>
+          <styled.IconBack><img src={patron} alt="Patron background" /></styled.IconBack>      
+          <form>
+            <styled.UlRow>
+              <styled.Col13>
+                <styled.Label htmlFor="subtotal">Nuevo ingreso</styled.Label>
+                <styled.InputIn id='subtotal' name="subtotal" value={income.subtotal} onChange={changeValue} type="number" pattern="[0-9]*" />
+              </styled.Col13>
+              <styled.Col13>
+                <styled.Label htmlFor="category">Categoría</styled.Label>
+                <styled.InputIn id='category' name="category" onChange={changeValue} type="text" list='categories' />
+                <datalist id='categories'>
+                  {user && categories.map(cat => {
+                    if (cat.name !== 'non-category') {
+                      return <option key={cat.id} value={cat.name}>{cat.name}</option>
+                    }
+                    return (<option key={cat.id} value=""></option>);
+                  })}
+                </datalist>
+              </styled.Col13>
+              <styled.Col13>
+                <styled.Label htmlFor="note">Nota</styled.Label>
+                <styled.Textarea id='note' name="note" value={income.note} onChange={changeValue} rows="1" />
+              </styled.Col13>
+            </styled.UlRow>
+              <styled.ButtonIn onClick={onSubmit}>Agregar</styled.ButtonIn>
+          </form>
+        </styled.ContainerHome>
+      </styled.BodySectionIn>
+      
+      {/* <!-- Saldo section --> */}
+      <styled.SaldoSection>
+          <styled.ContainerHome>
+              <styled.UlRow>
+                  <styled.Col12><div><h3>Saldo Abril 2021</h3></div></styled.Col12>
+                  <styled.Col12>
+                      <styled.SaldoNumber><h3>$ 0 COP</h3></styled.SaldoNumber>
+                  </styled.Col12>
+              </styled.UlRow>
+          </styled.ContainerHome>
+      </styled.SaldoSection>
     </React.Fragment>
   )
 }
