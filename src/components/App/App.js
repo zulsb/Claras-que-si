@@ -16,6 +16,7 @@ import Footer from '../Footer/Footer';
 import Notification from '../Notifications/Notification';
 import Categories from '../Categories/Categories'
 import Income from '../Income/Income';
+import Expense from '../Expense/Expense';
 import Perfil from '../Perfil/Perfil';
 
 
@@ -60,6 +61,9 @@ function App() {
         </Route>
         <Route path="/incomes">
           <Income></Income>
+        </Route>
+        <Route path="/expenses">
+          <Expense></Expense>
         </Route>
         <Route path="/perfil">
           <Perfil></Perfil>

@@ -1,18 +1,20 @@
 import React from "react";
+import { useUser } from "reactfire";
 import * as styled from "../Assets/Styles/Styled";
 
 function Perfil() {
+  const { data: user } = useUser();
   return (
     <React.Fragment>
       <styled.BodySection>
         <styled.DivPerfil>
           <div>
             <h4>Nombre de usuario:</h4>
-            <p>Maria4872385</p>
+            <p>{user.displayName}</p>
           </div>
           <div>
             <h4>Correo electrónico:</h4>
-            <p>sjfahfa@jsfjhsf.com</p>
+            <p>{user.email}</p>
           </div>
           <div>
             <h4>Contraseña:</h4>

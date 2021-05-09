@@ -22,6 +22,11 @@ function Register(props) {
     await firebase
       .auth()
       .createUserWithEmailAndPassword(register.email, register.password);
+    if (!user.data.displayName) {
+      user.data.updateProfile({
+        displayName: register.userName
+      });
+    }
   };
 
   const chageValue = (event) => {
