@@ -3,6 +3,7 @@ import { useFirestore, useUser } from 'reactfire';
 import * as styled from "../Assets/Styles/Styled";
 import patron from "../Assets/Images/patron.svg";
 import { Link } from 'react-router-dom';
+import History from '../History/History';
 
 function Expense(props) {
   const expDef = {
@@ -128,6 +129,7 @@ function Expense(props) {
               </styled.UlRow>
           </styled.ContainerHome>
       </styled.SaldoSection>
+      <History factor='expenses'></History>
     </React.Fragment>
   )
 }

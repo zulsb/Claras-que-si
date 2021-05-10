@@ -4,6 +4,7 @@ import { useFirestore, useUser } from "reactfire";
 import * as styled from "../Assets/Styles/Styled";
 import patron from "../Assets/Images/patron.svg";
 import { Link } from 'react-router-dom';
+import History from '../History/History';
 
 
 
@@ -132,6 +133,7 @@ function Income(props) {
               </styled.UlRow>
           </styled.ContainerHome>
       </styled.SaldoSection>
+      <History factor='incomes'></History>
     </React.Fragment>
   )
 }
