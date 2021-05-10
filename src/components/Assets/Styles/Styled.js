@@ -2,7 +2,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import logoicon from "../Images/logo-icon.png";
 import patronfooter from "../Images/patron-group-footer.svg";
 import patron from "../Images/patron.png";
-import { MdHome, MdNotifications, MdPerson, MdAddCircle, MdKeyboardReturn } from "react-icons/md";
+import { MdHome, MdNotifications, MdPerson, MdAddCircle, MdKeyboardReturn, MdBrightness1 } from "react-icons/md";
 
 
 /* Global
@@ -440,12 +440,41 @@ export const CalendarSection = styled.section`
 `;
 
 export const CardCalendar = styled.div`
-  span{
+  div{
+    width: 100%;
     display: flex;
     justify-content: center;
-    color: #FFFFFF;
   }
-    
+  span{
+    display: flex;
+    justify-content: ${({ isNextMonth }) => (isNextMonth ? "flex-end" : "start")};
+    color: #FFFFFF;
+    cursor: ${({ isActualMonth }) => (isActualMonth ? "none" : "pointer")};
+    position: relative;
+    font-size: ${({ isActualMonth }) => (isActualMonth ? "18px" : "16px")};
+    font-weight: ${({ isActualMonth }) => (isActualMonth ? "600" : "400")};
+    &:hover {
+      color: ${({ isActualMonth }) => (isActualMonth ? "#FFFFFF" : "#ffffffe0")};
+      transform: ${({ isActualMonth }) => (isActualMonth ? "none" : "scale(1.1, 1.1)")};
+      font-weight: ${({ isActualMonth }) => (isActualMonth ? "none" : "500")};
+    }
+  }    
+`;
+
+export const CardCalendarCenter = styled(CardCalendar)`
+  span{
+    display: flex;
+    justify-content: center;    
+  }    
+`;
+
+
+export const IconCalSection = styled(MdBrightness1)`
+  color: #7915c512;
+  position: absolute;
+  bottom: 5.4rem;  
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 45px;
 `;
 
 export const DivPerfil = styled.div`

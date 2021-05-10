@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as styled from "../Assets/Styles/Styled";
 import patron from "../Assets/Images/patron.svg";
-import Calendar from "../Calendar/Calendar";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import { useFirestore, useFirestoreCollectionData, useUser } from 'reactfire';
@@ -50,10 +49,10 @@ function Body() {
                     <styled.IconBack><img src={patron} alt="Patron background" /></styled.IconBack>
                     <styled.UlRow>
                         <styled.Col12>
-                            <styled.CardIn><h2>Total Ingresos</h2><span>$ {incomes} COP</span></styled.CardIn>
+                            <styled.CardIn><h2>Total Ingresos</h2><span>$ {Intl.NumberFormat().format(incomes)} COP</span></styled.CardIn>
                         </styled.Col12>
                         <styled.Col12>
-                            <styled.CardOu><h2>Total Gastos</h2><span>$ {expenses} COP</span></styled.CardOu>
+                            <styled.CardOu><h2>Total Gastos</h2><span>$ {Intl.NumberFormat().format(expenses)} COP</span></styled.CardOu>
                         </styled.Col12>
                     </styled.UlRow>
                 </styled.ContainerHome>
@@ -65,7 +64,7 @@ function Body() {
                     <styled.UlRow>
                         <styled.Col12><div><h3>Saldo {date.toLocaleDateString('es-Co', {month: 'long'})} {date.getFullYear()}</h3></div></styled.Col12>
                         <styled.Col12>
-                            <styled.SaldoNumber><h3>$ {balance} COP</h3></styled.SaldoNumber>
+                            <styled.SaldoNumber><h3>$ {Intl.NumberFormat().format(balance)} COP</h3></styled.SaldoNumber>
                         </styled.Col12>
                     </styled.UlRow>
                 </styled.ContainerHome>
@@ -77,17 +76,18 @@ function Body() {
                     <styled.UlRow>
                         <styled.Col13>
                             <styled.CardCalendar>
-                                <span><MdChevronLeft />{prevMonth} {date.getFullYear()}</span>
+                                <span><MdChevronLeft />{prevMonth}</span>
                             </styled.CardCalendar>
                         </styled.Col13>
                         <styled.Col13>
-                            <styled.CardCalendar>
-                                <Calendar/>
-                            </styled.CardCalendar>
+                            <styled.CardCalendarCenter isActualMonth={true}>
+                                <div><styled.IconCalSection size="58px" /></div>
+                                <span>{date.toLocaleDateString('es-Co', {month: 'long'})}</span>
+                            </styled.CardCalendarCenter>
                         </styled.Col13>
                         <styled.Col13>
-                            <styled.CardCalendar>
-                                <span>{nextMonth} {date.getFullYear()}<MdChevronRight /></span>
+                            <styled.CardCalendar isNextMonth={true}>
+                                <span>{nextMonth}<MdChevronRight /></span>
                             </styled.CardCalendar>
                         </styled.Col13>
                     </styled.UlRow>

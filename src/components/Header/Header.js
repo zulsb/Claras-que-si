@@ -13,7 +13,7 @@ function Header() {
                             <Link to={"/"}><styled.Logo src={logo} alt="Logo"/></Link> 
                             <styled.Nav>
                                 <li><styled.NavLink><Link to={"/"}><styled.HomeIcon /> Inicio</Link></styled.NavLink></li>
-                                <li><styled.NavLink><Link to={"/notifications"}><styled.NotiIcon /> Notificaciones</Link></styled.NavLink></li>
+                                {/* <li><styled.NavLink><Link to={"/notifications"}><styled.NotiIcon /> Notificaciones</Link></styled.NavLink></li> */}
                                 <li><styled.NavLink><Link to={"/perfil"}><styled.UserIcon /> Perfil</Link></styled.NavLink></li>
                                 <li><LogOut>Cerrar sesión</LogOut></li>
                             </styled.Nav>
