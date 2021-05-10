@@ -447,7 +447,7 @@ export const CardCalendar = styled.div`
   }
   span{
     display: flex;
-    justify-content: ${({ isNextMonth }) => (isNextMonth ? "flex-end" : "start")};
+    justify-content: ${({ isNextMonth }) => (isNextMonth ? "start" : "flex-end")};
     color: #FFFFFF;
     cursor: ${({ isActualMonth }) => (isActualMonth ? "none" : "pointer")};
     position: relative;
