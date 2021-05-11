@@ -3,12 +3,12 @@
 
 ### Contents
 
-* [Description](https://github.com/zulsb/Homecooker#description)
-* [Requirements](https://github.com/zulsb/Homecooker#requirements)
-* [Files](https://github.com/zulsb/Homecooker#repository-contents)
-* [How to use](https://github.com/zulsb/Homecooker#how-to-use)
-* [Screenshots](https://github.com/zulsb/Homecooker#screenshots)
-* [Authors](https://github.com/zulsb/Homecooker#authors)
+* [Description](https://github.com/zulsb/Claras-que-si#description)
+* [Requirements](https://github.com/zulsb/Claras-que-si#requirements)
+* [Files](https://github.com/zulsb/Claras-que-si#repository-contents)
+* [How to use](https://github.com/zulsb/Claras-que-si#how-to-use)
+* [Screenshots](https://github.com/zulsb/Claras-que-si#screenshots)
+* [Authors](https://github.com/zulsb/Claras-que-si#authors)
 ---
 
 ### Description
