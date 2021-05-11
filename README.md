@@ -50,7 +50,7 @@ ClarasQueSí - Final project files:
 
 #### Login:
 Login manually or with google if you already have an account
-<div align= center><img src='./src/components/Assets/Images/login.png' width="70%" /></div>
+![Login](./src/components/Assets/Images/login.png)
 
 #### Register:
 Register manually or with google if you don't have an account
