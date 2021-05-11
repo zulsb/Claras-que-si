@@ -50,7 +50,7 @@ ClarasQueSí - Final project files:
 
 #### Login:
 Login manually or with google if you already have an account
-![Login](./src/components/Assets/Images/login.png)
+<div align= center><img src='./src/components/Assets/Images/login.png' width="70%" /></div>
 
 #### Register:
 Register manually or with google if you don't have an account
@@ -78,4 +78,4 @@ Register manually or with google if you don't have an account
 - Github: [zulsb](https://github.com/zulsb)
 
 <p align= center>Cohort 10
-<p align= center>Colombia, Cali 2021
+<p align= center>Cali, Colombia 2021
