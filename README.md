@@ -1,17 +1,16 @@
-# ClarasQueSí project
 <div align= center><img src='src/components/Assets/Images/logo.png'></div>
 
-### Contents
+## Contents
 
 * [Description](https://github.com/zulsb/Claras-que-si#description)
 * [Requirements](https://github.com/zulsb/Claras-que-si#requirements)
 * [Files](https://github.com/zulsb/Claras-que-si#repository-contents)
-* [How to use](https://github.com/zulsb/Claras-que-si#how-to-use)
+* [How to install](https://github.com/zulsb/Claras-que-si#how-to-install)
 * [Screenshots](https://github.com/zulsb/Claras-que-si#screenshots)
 * [Authors](https://github.com/zulsb/Claras-que-si#authors)
 ---
 
-### Description
+## Description
 Web application to manage personal expenses in an easy, simple and uncomplicated way, allowing you to record income and expenses, obtaining a monthly balance.
 
 ---
@@ -25,7 +24,7 @@ Web application to manage personal expenses in an easy, simple and uncomplicated
 
 ---
 
-### How to use
+## How to install
 
 ```bash
 - git clone https://github.com/zulsb/Claras-que-si.git
@@ -35,7 +34,7 @@ Web application to manage personal expenses in an easy, simple and uncomplicated
  
 ---
 
-### Repository contents
+## Repository contents
 ClarasQueSí - Final project files:
 
 |   **File**   |   **Description**   |
@@ -46,27 +45,29 @@ ClarasQueSí - Final project files:
 
 ---
 
-### Screenshots
+## Screenshots
 
-#### Login:
+### Login:
 Login manually or with google if you already have an account
+
 ![Login](./src/components/Assets/Images/login.png)
 
-#### Register:
+### Register:
 Register manually or with google if you don't have an account
+
 ![Register](./src/components/Assets/Images/register.png)
 
-#### Homepage:
+### Homepage:
 ![Homepage](./src/components/Assets/Images/home.png)
 
 #### Income and expenses registration:
 ![Registration]()
 
 ---
-### Authors
+## Authors
 
-#### [Joshua Martinez](https://linkedin.com/in/joshuamartinez)
-- Github: [dantsub](https://github.com/dantsub)
+#### Joshua Martinez 
+<a href="https://github.com/dantsub"><img src="./src/components/Assets/Images/github.svg" alt="GitHub"></a><a href="https://github.com/dantsub"><img src="./src/components/Assets/Images/linkedin.svg" alt="GitHub"></a>
 
 #### [Jesús Acevedo Cano](https://linkedin.com/in/jesus-acevedo-cano)
 - Github: [Jesus-Acevedo-Cano](https://github.com/Jesus-Acevedo-Cano)
