@@ -8,12 +8,12 @@
 * [How to install](https://github.com/zulsb/Claras-que-si#how-to-install)
 * [Screenshots](https://github.com/zulsb/Claras-que-si#screenshots)
 * [Authors](https://github.com/zulsb/Claras-que-si#authors)
----
+
 
 ## Description
 Web application to manage personal expenses in an easy, simple and uncomplicated way, allowing you to record income and expenses, obtaining a monthly balance.
 
----
+
 
 ## Requirements
 * Framework: React
@@ -22,7 +22,7 @@ Web application to manage personal expenses in an easy, simple and uncomplicated
 * Design Tools: Figma, Illustrator
 * Database: FireBase 
 
----
+
 
 ## How to install
 
@@ -32,10 +32,10 @@ Web application to manage personal expenses in an easy, simple and uncomplicated
 - npm run start
 ```
  
----
+
 
 ## Repository contents
-ClarasQueSí - Final project files:
+ClarasQueSí - Project files:
 
 |   **File**   |   **Description**   |
 | -------------- | --------------------- |
@@ -43,7 +43,7 @@ ClarasQueSí - Final project files:
 |src/ | Contains the definition of all the components to use in the project. |
 |README.md | Readme file. |
 
----
+
 
 ## Screenshots
 
@@ -63,20 +63,16 @@ Register manually or with google if you don't have an account
 #### Income and expenses registration:
 ![Registration]()
 
----
+
 ## Authors
 
-#### Joshua Martinez 
-<a href="https://github.com/dantsub"><img src="./src/components/Assets/Images/github.svg" alt="GitHub"></a><a href="https://github.com/dantsub"><img src="./src/components/Assets/Images/linkedin.svg" alt="GitHub"></a>
+#### Joshua Martinez --> <a href="https://linkedin.com/in/dantsub"><img src="./src/components/Assets/Images/linkedin.svg" alt="LinkedIn"></a> <a href="https://github.com/dantsub"><img src="./src/components/Assets/Images/github.svg" alt="GitHub"></a>
 
-#### [Jesús Acevedo Cano](https://linkedin.com/in/jesus-acevedo-cano)
-- Github: [Jesus-Acevedo-Cano](https://github.com/Jesus-Acevedo-Cano)
+#### Jesús Acevedo Cano --> <a href="https://linkedin.com/in/jesus-acevedo-cano"><img src="./src/components/Assets/Images/linkedin.svg" alt="LinkedIn"></a> <a href="https://github.com/Jesus-Acevedo-Cano"><img src="./src/components/Assets/Images/github.svg" alt="GitHub"></a>
 
-#### [Paula Sotelo](https://linkedin.com/in/paula-sotelo-ba-733a70)
-- Github: [omeinsotelo](https://github.com/omeinsotelo)
+#### Paula Sotelo --> <a href="https://linkedin.com/in/paula-sotelo-ba-733a70"><img src="./src/components/Assets/Images/linkedin.svg" alt="LinkedIn"></a> <a href="https://github.com/omeinsotelo"><img src="./src/components/Assets/Images/github.svg" alt="GitHub"></a>
 
-#### [Luz Sánchez Bolaños](https://linkedin.com/in/luzsanchezb)
-- Github: [zulsb](https://github.com/zulsb)
+#### Luz Sánchez Bolaños --> <a href="https://linkedin.com/in/luzsanchezb"><img src="./src/components/Assets/Images/linkedin.svg" alt="LinkedIn"></a> <a href="https://github.com/zulsb"><img src="./src/components/Assets/Images/github.svg" alt="GitHub"></a>
 
 <p align= center>Cohort 10
 <p align= center>Cali, Colombia 2021
