@@ -66,13 +66,13 @@ Register manually or with google if you don't have an account
 
 ## Authors
 
-#### Joshua Martinez --> <a href="https://linkedin.com/in/dantsub"><img src="./src/components/Assets/Images/linkedin.svg" alt="LinkedIn"></a> <a href="https://github.com/dantsub"><img src="./src/components/Assets/Images/github.svg" alt="GitHub"></a>
+* #### Joshua Martinez <a href="https://linkedin.com/in/dantsub"><img src="./src/components/Assets/Images/linkedin.svg" alt="LinkedIn"></a> | <a href="https://github.com/dantsub"><img src="./src/components/Assets/Images/github.svg" alt="GitHub"></a>
 
-#### Jesús Acevedo Cano --> <a href="https://linkedin.com/in/jesus-acevedo-cano"><img src="./src/components/Assets/Images/linkedin.svg" alt="LinkedIn"></a> <a href="https://github.com/Jesus-Acevedo-Cano"><img src="./src/components/Assets/Images/github.svg" alt="GitHub"></a>
+* #### Jesús Acevedo Cano <a href="https://linkedin.com/in/jesus-acevedo-cano"><img src="./src/components/Assets/Images/linkedin.svg" alt="LinkedIn"></a> | <a href="https://github.com/Jesus-Acevedo-Cano"><img src="./src/components/Assets/Images/github.svg" alt="GitHub"></a>
 
-#### Paula Sotelo --> <a href="https://linkedin.com/in/paula-sotelo-ba-733a70"><img src="./src/components/Assets/Images/linkedin.svg" alt="LinkedIn"></a> <a href="https://github.com/omeinsotelo"><img src="./src/components/Assets/Images/github.svg" alt="GitHub"></a>
+* #### Paula Sotelo <a href="https://linkedin.com/in/paula-sotelo-ba-733a70"><img src="./src/components/Assets/Images/linkedin.svg" alt="LinkedIn"></a> | <a href="https://github.com/omeinsotelo"><img src="./src/components/Assets/Images/github.svg" alt="GitHub"></a>
 
-#### Luz Sánchez Bolaños --> <a href="https://linkedin.com/in/luzsanchezb"><img src="./src/components/Assets/Images/linkedin.svg" alt="LinkedIn"></a> <a href="https://github.com/zulsb"><img src="./src/components/Assets/Images/github.svg" alt="GitHub"></a>
+* #### Luz Sánchez Bolaños <a href="https://linkedin.com/in/luzsanchezb"><img src="./src/components/Assets/Images/linkedin.svg" alt="LinkedIn"></a> | <a href="https://github.com/zulsb"><img src="./src/components/Assets/Images/github.svg" alt="GitHub"></a>
 
 <p align= center>Cohort 10
 <p align= center>Cali, Colombia 2021
