@@ -122,7 +122,7 @@ function Expense(props) {
       <styled.SaldoSection>
           <styled.ContainerHome>
               <styled.UlRow>
-                  <styled.Col12><div><h3>Saldo actual</h3></div></styled.Col12>
+                  <styled.Col12><div><h3>Total Egresos</h3></div></styled.Col12>
                   <styled.Col12>
                       <styled.SaldoNumber><h3>$ 0 COP</h3></styled.SaldoNumber>
                   </styled.Col12>

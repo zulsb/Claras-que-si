@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import History from '../History/History';
 
 
-
 function Income(props) {
   /* state de income */
   const incDef = {
@@ -126,7 +125,7 @@ function Income(props) {
       <styled.SaldoSection>
           <styled.ContainerHome>
               <styled.UlRow>
-                  <styled.Col12><div><h3>Saldo actual</h3></div></styled.Col12>
+                  <styled.Col12><div><h3>Total Ingresos</h3></div></styled.Col12>
                   <styled.Col12>
                       <styled.SaldoNumber><h3>$ 0 COP</h3></styled.SaldoNumber>
                   </styled.Col12>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFirestore, useFirestoreCollectionData, useUser } from 'reactfire';
+import * as styled from "../Assets/Styles/Styled";
 
 function History({factor}) {
   let month = new Date().toLocaleString('default', { month: 'short' });
@@ -11,13 +12,25 @@ function History({factor}) {
     <React.Fragment>
     { status === 'success' &&
       <React.Fragment>
+        <styled.TitleHistory>
+          <div><h4>Fecha</h4></div>
+          <div><h4>Categoría</h4></div>
+          <div><h4>Valor</h4></div>
+        </styled.TitleHistory>
         {
           history.map((h) => 
-            <div style={{width: '80%', margin: '0.2rem auto', minHeight: '20px', color: 'white', display: 'flex', justifyContent: 'space-between'}} key={h.NO_ID_FIELD}>
-              {<p>{new Date(h.created_at.seconds*1000).toLocaleString(options)}</p>}
-              <p style={{textAlign: 'left'}}>{h.category === 'non-category' ? 'Sin categoria' : h.category}</p>
-              <p>{h.subtotal}</p>
-            </div>
+            <styled.ContainerHistory key={h.NO_ID_FIELD}>              
+                <div>
+                  {<p>{new Date(h.created_at.seconds*1000).toLocaleString(options)}</p>}
+                </div>              
+                <div>
+                  <p style={{textAlign: 'left'}}>{h.category === 'non-category' ? 'Sin categoria' : h.category}</p>
+                </div>
+                <div>
+                  <p>$ {Intl.NumberFormat().format(h.subtotal)}</p>
+                </div>
+              
+            </styled.ContainerHistory>
           )
         }
       </React.Fragment>

@@ -81,14 +81,14 @@ export const Input = styled.input`
   border-radius: 8px;
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
-  color: ${({ isExpense }) => (isExpense ? "#FF9900" : "#4A1176")};
+  color: ${({ isExpense }) => (isExpense ? "#DA8402" : "#4A1176")};
 `;
 
 export const InputIn = styled(Input)`
   position: relative;
   background: transparent;
   border: none;
-  border-bottom: 2px solid ${({ isExpense }) => (isExpense ? "#FF9900" : "#4A1176")};
+  border-bottom: 2px solid ${({ isExpense }) => (isExpense ? "#DA8402" : "#4A1176")};
   border-radius: 0;
 `;
 
@@ -98,7 +98,7 @@ export const Label = styled.label`
   font-weight: 600;
   display: flex;
   justify-content: center;
-  color: ${({ isExpenseLabel }) => (isExpenseLabel ? "#FF9900" : "#4A1176")};
+  color: ${({ isExpenseLabel }) => (isExpenseLabel ? "#DA8402" : "#4A1176")};
 `;
 
 export const Textarea = styled.textarea`
@@ -106,7 +106,7 @@ export const Textarea = styled.textarea`
   position: relative;
   background: transparent;
   border: none;
-  border-bottom: 2px solid ${({ isExpense }) => (isExpense ? "#FF9900" : "#4A1176")};
+  border-bottom: 2px solid ${({ isExpense }) => (isExpense ? "#DA8402" : "#4A1176")};
   border-radius: 0;
   width: 100%;
   margin: 0 0 15px;
@@ -114,7 +114,7 @@ export const Textarea = styled.textarea`
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   resize: none;
-  color: ${({ isExpense }) => (isExpense ? "#FF9900" : "#4A1176")};
+  color: ${({ isExpense }) => (isExpense ? "#DA8402" : "#4A1176")};
 `;
 
 export const TextAcount = styled.div`
@@ -249,6 +249,25 @@ export const ContainerHome = styled.div`
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
+`;
+
+export const ContainerHistory = styled(ContainerHome)`
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  div {
+    p {   
+    text-align: center;
+    }
+  }
+`;
+
+export const TitleHistory = styled(ContainerHistory)`
+  div {
+    h4 {
+      text-align: center;
+    }
+  }
 `;
 
 export const Logo = styled.img`
@@ -455,8 +474,6 @@ export const CardCalendar = styled.div`
     font-weight: ${({ isActualMonth }) => (isActualMonth ? "600" : "400")};
     &:hover {
       color: ${({ isActualMonth }) => (isActualMonth ? "#FFFFFF" : "#ffffffe0")};
-      transform: ${({ isActualMonth }) => (isActualMonth ? "none" : "scale(1.1, 1.1)")};
-      font-weight: ${({ isActualMonth }) => (isActualMonth ? "none" : "500")};
     }
   }    
 `;
